@@ -1,0 +1,15 @@
+ 							     ---------------------------------------------------
+*******************************  Diseño, Desarrollo y Adaptación del Sistema SICONIP  *******************************
+ 							     ---------------------------------------------------
+
+Universidad Luterana Salvadoreña, Centro Universitario Regional de Cabañas ----> http://curc.uls.edu.sv
+Licencia: Creative Commons 3.0 ----> https://creativecommons.org/licenses/by/3.0/
+
+
+INFORMACIÓN:
+
+**Plantilla Frontend y Backend (Básico) extraída de Internet**
+
+
+
+
