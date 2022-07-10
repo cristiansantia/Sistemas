@@ -1,71 +1,29 @@
-<?php
-    session_start();
-    if (isset($_SESSION['logged'])) {
-        if ($_SESSION['logged'] == true) {
-            header("location: ./home.php?alert=2");
-        } else {
-           
-        }
-    }
-?>
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <?php include("./elementos/header.php"); ?>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!--Icon-Font-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
-<body>  
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <br>
-                <br>
-                <br>
-        <?php 
-        include("programacion/conexion.php");
-        $consulta=mysqli_query($conexion, "SELECT logoinstitucion FROM institucion");
-        $resultado=mysqli_fetch_array($consulta);
-        ?>
-        <div style="border: none;" class="thumbnail">
-        <img height="50%" width="50%" class="" src="data:images/jpg;base64,<?php echo base64_encode($resultado['logoinstitucion']); ?>" alt="" >
+<body>
+    <div class="container-form">
+        <div class="info-form">
+            <h2>Contáctanos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eligendi est voluptates quae ipsam eius, in quasi odio porro aut vel beatae aperiam.</p>
+            <a href="#"><i class="fa fa-phone"></i> 55-7498-7920</a>
+            <a href="#"><i class="fa fa-envelope"></i> email@tudominio.com</a>
+            <a href="#"><i class="fa fa-map-marked"></i> Teposcolula, Oax., México</a>
         </div>
-                <br>
-                <form autocomplete="off" method="post" action="programacion/validation.php">
-                    <div class="form-group">
-                        <label for="email"></label>
-                        <input type="text" class="form-control" placeholder="Usuario:" name="user" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="email"></label>
-                        <input type="password" class="form-control" placeholder="Contraseña:" name="password" id="email">
-                    </div>
-                    <button class="btn btn-primary hvr-grow">&nbsp;<span class="fas fa-sign-in-alt"></span> Entrar</button>
-                    <br>
-                </form>
-             <!--   <?php  
-                    
-                    if ($_GET['alert'] == 1) {
-                        echo '<div style="z-index: 1000; position: fixed; margin-left: -60px; width: 500px;" id="alertas" class="alert alert-danger alert-dismissable">
-                          <strong>¡Cuidado!</strong> El Usuario o la Contraseña son incorrectos.
-                        </div>';
-                    } elseif ($_GET['alert'] == 2) {
-                        echo '<div style="z-index: 1000; position: fixed; margin-left: -60px; width: 500px;" id="alertas" class="alert alert-warning alert-dismissable">
-                          <strong>¡Cuidado!</strong> Debes iniciar sesión.
-                        </div>';
-                    } elseif ($_GET['alert'] == 3) {
-                        echo '<div style="z-index: 1000; position: fixed; margin-left: -60px; width: 500px;" id="alertas" class="alert alert-success alert-dismissable">
-                          <strong>¡Hecho!</strong> Se ha cerrado la sesión.
-                        </div>';
-                    }  
-                ?>-->
-            </div>
-        </div>
+        <form action="#" autocomplete="off">
+            <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
+            <input type="emal" name="email" placeholder="Tu Email" class="campo">
+            <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
+            <button type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">Enviar</button>
+            
+        </form>
     </div>
-    <br>
-    <br>
-    </div>
-</div>
-<!--FOOTER-->
-<?php include("./elementos/footer.php"); ?>
-<!--FOOTER-->
+
 </body>
-</html>       
+</html>
